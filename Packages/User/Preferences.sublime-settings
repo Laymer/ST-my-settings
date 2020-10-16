@@ -21,24 +21,22 @@
         "Symfony",
         "todo",
         "unittests",
+        "polyfill",
     ],
     "afp_blacklist_scopes":
     [
         "string.regexp",
+        "comment",
     ],
     "afp_valid_scopes":
     [
-        "text -text.html.basic",
+        "text - text.html.basic",
         "source string",
-        "source.css",
-        "source.less",
-        "source.sass",
-        "source.scss",
+        "source.css | source.less | source.sass | source.scss",
     ],
-    "atomic_save": false,
     "auto_complete_cycle": true,
     "auto_complete_preserve_order": "none",
-    "auto_complete_selector": "source, meta.tag - punctuation.definition.tag.begin, text",
+    "auto_complete_selector": "meta.tag | source | text",
     "auto_complete_triggers":
     [
         {
@@ -55,7 +53,7 @@
         },
         {
             "characters": ".:>",
-            "selector": "source.c, source.c++",
+            "selector": "source.c | source.c++",
         },
     ],
     "auto_find_in_selection": true,
@@ -119,7 +117,7 @@
     "dictionary": "Packages/Language - English/en_US-large.dic",
     "draw_minimap_border": true,
     "draw_shadows": true,
-    "draw_white_space": "all",
+    "draw_white_space": ["all"],
     "enable_tab_scrolling": false,
     "ensure_newline_at_eof_on_save": true,
     "file_exclude_patterns":
@@ -214,9 +212,8 @@
     "font_face": "Ubuntu Mono",
     "font_options":
     [
-        "bold",
-        "gdi",
-        "subpixel_antialias",
+        // "bold",
+        // "gdi",
     ],
     "font_size": 12,
     "gutter": true,
@@ -262,8 +259,10 @@
         "branch-build/",
     ],
     "line_numbers": true,
+    "line_padding_bottom": 2,
     "match_brackets": false,
     "match_tags": false,
+    // "mini_auto_complete": true,
     "preview_on_click": "only_left",
     "rulers":
     [
@@ -276,6 +275,7 @@
     "show_encoding": true,
     "show_line_endings": true,
     "spell_check": false,
+    "tab_size": 4,
     "theme": "DC_3_GW.sublime-theme",
     "theme_font_options":
     [
